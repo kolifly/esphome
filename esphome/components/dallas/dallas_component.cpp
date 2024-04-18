@@ -66,9 +66,9 @@ void DallasComponent::setup() {
       sensor->set_address(this->found_sensors_[*sensor->get_index()]);
     }
 
-    if (!sensor->setup_sensor()) {
+    /*if (!sensor->setup_sensor()) {
       this->status_set_error();
-    }
+    }*/
   }
 }
 void DallasComponent::dump_config() {
