@@ -268,7 +268,7 @@ bool DallasTemperatureSensor::check_scratch_pad() {
   if (!chksum_validity) {
     ESP_LOGW(TAG, "'%s' - Scratch pad checksum invalid!", this->get_name().c_str());
   } else if (!config_validity) {
-    ESP_LOGW(TAG, "'%s' - Scratch pad config register invalid!", this->get_name().c_str());
+    ESP_LOGW(TAG, "'%s' - Scratch pad config register still invalid!", this->get_name().c_str());
   }
   return chksum_validity && config_validity;
 }
