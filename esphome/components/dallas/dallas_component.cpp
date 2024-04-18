@@ -143,11 +143,11 @@ void DallasComponent::update() {
         this->status_set_warning();
         return;
       }
-      if (!sensor->check_scratch_pad()) {
+      /*if (!sensor->check_scratch_pad()) {
         sensor->publish_state(NAN);
         this->status_set_warning();
         return;
-      }
+      }*/
 
       float tempc = sensor->get_temp_c();
       ESP_LOGD(TAG, "'%s': Got Temperature=%.1f°C", sensor->get_name().c_str(), tempc);
